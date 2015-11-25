@@ -110,12 +110,12 @@ function option5_1()
     // Define $line to store line
     $phrase = 0;
     
-    $word1_1 = RandomLine("./wordbank/j2.txt");
-    $word1 = rtrim($word1_1);
-    $word2_2 = RandomLine("./wordbank/j2.txt");
-    $word2 = rtrim($word2_2);
-    $word3_3 = RandomLine("./wordbank/n1.txt");
-    $word3 = rtrim($word3_3);
+    $word1 = RandomLine("./wordbank/j2.txt");
+    $word1 = rtrim($word1);
+    $word2 = RandomLine("./wordbank/j2.txt");
+    $word2 = rtrim($word2);
+    $word3 = RandomLine("./wordbank/n1.txt");
+    $word3 = rtrim($word3);
     
     // Concatenate words into $line
     $phrase = $word1 . " " . $word2 . " " . $word3 . "\n";
