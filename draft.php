@@ -1,9 +1,14 @@
 <?php
 
-gent5sline();
+$hi = gent5sline();
+
+echo $hi;
+
+function gent5sline()
 {
     // Get random int and store inside variable
-    $randomint = rand(1, 15);
+    // $randomint = rand(1, 15);
+    $randomint = 1;
     $line = 0;
     
     if ($randomint = 1)
@@ -96,41 +101,36 @@ gent5sline();
         $line = option5_15();
     }    
     
-    else if ($randomint = 16)
-    {
-        // Call function 5.16
-        $line = option5_16();
-    }    
-    
     return $line;
 }
 
 // Example of option function
-option5_1();
+function option5_1()
 {
     // Define $line to store line
     $phrase = 0;
     
-    $word1 = RandomLine(fileinput1);
-    $word2 = RandomLine(fileinput2);
-    $word3 = RandomLine(fileinput3);
-    $word4 = RandomLine(fileinput4);
-    $word5 = RandomLine(fileinput5);
+    $word1_1 = RandomLine("./wordbank/j2.txt");
+    $word1 = rtrim($word1_1);
+    $word2_2 = RandomLine("./wordbank/j2.txt");
+    $word2 = rtrim($word2_2);
+    $word3_3 = RandomLine("./wordbank/n1.txt");
+    $word3 = rtrim($word3_3);
     
     // Concatenate words into $line
-    $phrase = $word1 . $word2 . $word3 . $word4 . $word5;
+    $phrase = $word1 . " " . $word2 . " " . $word3 . "\n";
     
     return $phrase;
 }
 
 function RandomLine($fileinput) 
 {
-    $textfile = "./folder/fileinput.txt";
-    
-    if (file_exists($textfile))
+
+    if (file_exists($fileinput))
     {
-        $sites =file($textfile);
-        $string = $sites[array_rand($sites)];
+        $sites = file($fileinput);
+        // $string = array_rand($sites, 1);
+        $string = $sites[array_rand($sites, 1)];
     }
         
     else 
