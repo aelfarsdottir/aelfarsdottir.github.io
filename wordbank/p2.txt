@@ -1,0 +1,41 @@
+aboard
+about
+above
+absent
+across
+after
+against
+along
+amid
+amidst
+among
+around
+atop
+before
+behind
+below
+beneath
+beside
+between
+despite
+due to
+during
+except
+far from
+following
+inside
+into
+minus
+near to
+next to
+onto
+out of
+outside
+over
+throughout
+toward
+under
+until
+upon
+within
+without
