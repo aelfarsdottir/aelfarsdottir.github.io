@@ -26,11 +26,11 @@
     }
   }
   
-  // if user reached page via GET (as by clicking a link or via redirect)
-  if ($_SERVER["REQUEST_METHOD"] == "GET")
-  {
-    // pass in variable background images?
-    // render homepage
+  // // if user reached page via GET (as by clicking a link or via redirect)
+  // if ($_SERVER["REQUEST_METHOD"] == "GET")
+  // {
+  //   // pass in variable background images?
+  //   // render homepage
     render("home.php", ["title" => "Hello, Haiku"]);    
-  }
+  // }
 ?>
