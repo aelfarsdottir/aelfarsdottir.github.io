@@ -4,7 +4,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "GET")
     {
         // else render homepage because we don't want people to be able to access our draft.php (?)
-        render("home.php", ["title" => "Hello, Haiku"]);
+        render("home.html", ["title" => "Hello, Haiku"]);
     }
     
     // AE else if user reached page via POST (by submitting the generate-button form on the homepage via POST)
@@ -33,7 +33,7 @@
     //echo $haiku = $firstline.$thirdline;
 
     // AE pass the lines of the haiku to the view: haiku.php
-    render("haiku.php", ["line1" => $firstline, "line2" => $secondline, "line3" => $thirdline, "title" => "Haiku"]);
+    render("haiku.html", ["line1" => $firstline, "line2" => $secondline, "line3" => $thirdline, "title" => "Haiku"]);
 
 function gent5sline()
 {

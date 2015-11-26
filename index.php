@@ -10,7 +10,7 @@
   // {
   //   // pass in variable background images?
   //   // render homepage
-  render("home.php", ["title" => "Hello, Haiku"]);
+  render("home.html", ["title" => "Hello, Haiku"]);
   // }
   
 ?>
