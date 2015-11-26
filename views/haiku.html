@@ -1,9 +1,42 @@
-<div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- http://getbootstrap.com/ -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../css/styles.css" rel="stylesheet"/>
+        <title>Hello, Haiku</title>
+    </head>
+    
+    <body>
+      <div class="container">
+        <div id="top">
+          <div>
+            <a href="/"><img alt="Hello, Haiku" src="../views/logo.png"/></a>
+          </div>
+        </div>
 
-    <!--layout the lines prettily-->
-    <!--what type of division should it be? create a new element id for css?-->
-    <p><?= $firstline?></p>
-    <p><?= $secondline?></p>
-    <p><?= $thirdline?></p>
+        <div id="middle">
+          <p></p><img src="http://img11.deviantart.net/8f9c/i/2009/101/d/3/fuji_cherry_blossoms__by_zeroai.jpg" alt="Cherry Blossoms" height="342" width="342"><p></p></p>
+            <p><?= $firstline?></p>
+            <p><?= $secondline?></p>
+            <p><?= $thirdline?></p>
+          <!--we want to submit the REgenerate button click via POST in order to call draft.php again and regenerate a haiku-->
+          <form action="draft.php" method="POST">
+            <fieldset>
+              <div class="form-group">
+                <button class="btn btn-default" type="submit">
+                  <span aria-hidden="true"></span>
+                    Regenerate!
+                </button>
+              </div>
+            </fieldset> 
+          </form>
+        </div>
 
-</div>
+        <div id="bottom">
+          <!-- Brought to you by <a href="http://aelfarsdottir.github.io">Hello, Haiku</a>. -->
+          <p>Copyright &copy; <?php echo date("2015"); ?> Hello, Haiku. All rights reserved.</p>
+        </div>
+      </div>
+    </body>
+</html>

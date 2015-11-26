@@ -4,7 +4,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "GET")
     {
         // else render homepage because we don't want people to be able to access our draft.php (?)
-        render("home.html", ["title" => "Hello, Haiku"]);
+        redirect("index.html", ["title" => "Hello, Haiku"]);
     }
     
     // AE else if user reached page via POST (by submitting the generate-button form on the homepage via POST)
