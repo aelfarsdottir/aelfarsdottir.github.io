@@ -1,12 +1,22 @@
 <div>
-
     <body>
         Hello, Haiku!
     <p></p><img src="http://img11.deviantart.net/8f9c/i/2009/101/d/3/fuji_cherry_blossoms__by_zeroai.jpg" alt="Cherry Blossoms" height="142" width="142"></p>
     </body>
     
-    <form>
-        <input type="button" value="Generate!" onclick="window.location.href='http://aelfarsdottir.github.io/haiku.php'" />
+    <!--we want to submit the generate button click via POST in order to call draft.php and generate a haiku-->
+    <form action="draft.php" method="POST">
+        <fieldset>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">
+                    <span aria-hidden="true"></span>
+                    Generate!
+                </button>
+            </div>
+        </fieldset> 
     </form>
-    
 <div>
+    
+    <!--the following lines just bring user to the haiku.php page but doesn't go through draft.php first. that's why we need a button with submit action & method POST-->
+        <!--<input type="button" value="Generate!" onclick="window.location.href='http://aelfarsdottir.github.io/haiku.php'" />-->
+        <!-- // clicking the button "Generate!" should send a POST request to the draft.php, which will then send the generated lines and pass them to the haiku page in rendering the haiku.php page -->
