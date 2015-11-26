@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <div>
     <body>
         Hello, Haiku!
@@ -33,3 +35,5 @@
   // }
   
 <!--?>-->
+
+</html>
