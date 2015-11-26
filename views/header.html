@@ -3,8 +3,8 @@
 <html>
     <head>
         <!-- http://getbootstrap.com/ -->
-        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="/css/styles.css" rel="stylesheet"/>
+        <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../css/styles.css" rel="stylesheet"/>
         <title>Hello, Haiku</title>
     </head>
     
@@ -12,7 +12,7 @@
         <div class="container">
             <div id="top">
                 <div>
-                    <a href="/"><img alt="Hello, Haiku" src="/views/logo.png"/></a>
+                    <a href="/"><img alt="Hello, Haiku" src="../views/logo.png"/></a>
                 </div>
                 <!--<?php // if (!empty($_SESSION["id"])): ?>-->
                 <!--    <ul class="nav nav-pills">-->
