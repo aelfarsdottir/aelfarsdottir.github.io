@@ -6,15 +6,15 @@
 function render($view, $values = [])
 {
     // if view exists, render it
-    if (file_exists("../views/{$view}"))
+    if (file_exists("{$view}"))
     {
       // extract variables into local scope
       extract($values);
 
       // render view (between header and footer)
-      require("../views/header.html");
-      require("../views/{$view}");
-      require("../views/footer.html");
+      // require("../views/header.html");
+      require("{$view}");
+      // require("../views/footer.html");
       exit;
     }
 
