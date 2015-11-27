@@ -1,14 +1,14 @@
 <?php
 
     // AE if user reached page via GET (as by clicking a link or via redirect)
-    if ($_SERVER["REQUEST_METHOD"] == "GET")
+    if ($_SERVER['REQUEST_METHOD'] == "GET")
     {
         // else render homepage because we don't want people to be able to access our draft.php (?)
-        redirect("http://aelfarsdottir.github.io", ["title" => "Hello, Haiku"]);
+        redirect("http://aelfarsdottir.github.io/haiku.html", ["title" => "Hello, Haiku"]);
     }
     
     // AE else if user reached page via POST (by submitting the generate-button form on the homepage via POST)
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    if ($_SERVER['REQUEST_METHOD'] == "POST")
     {
         
     // AE to include the render function
