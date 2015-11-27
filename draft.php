@@ -34,7 +34,9 @@
 
     // AE pass the lines of the haiku to the view: haiku.php
     render("haiku.html", ["line1" => $firstline, "line2" => $secondline, "line3" => $thirdline, "title" => "Haiku"]);
-
+    redirect("http://aelfarsdottir.github.io/haiku.html");
+    
+    
 function gent5sline()
 {
     // Get random int and store inside variable
