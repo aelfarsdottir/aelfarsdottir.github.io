@@ -493,6 +493,6 @@ function RandomLine($fileinput)
     return $string;
 } // AE ends function
 
-// } // AE to end the if($_SERVER["REQUEST_METHOD"] == "POST"
+} // AE to end the if($_SERVER["REQUEST_METHOD"] == "GET"
 
 ?>
