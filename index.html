@@ -27,6 +27,7 @@
             // // send the data to PHP now, and wait for response to update the status div
             hr.send();
             // document.getElementById("status").innerHTML = "processing...";
+            window.location.href = "http://aelfarsdottir.github.io/haiku.html";
           }
         </script>
     </head>
@@ -46,8 +47,6 @@
           <!--we want to submit the generate button click via POST in order to call draft.php and generate a haiku-->
           <input name="myBtn" type="submit" value="Generate!" onclick="ajax_post();">
           <br></br>
-          
-          <p></p><?php print(htmlspecialchars($haiku));?><p></p>
         
         <!--<div id="status"></div>-->
         

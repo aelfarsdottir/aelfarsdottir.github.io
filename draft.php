@@ -20,7 +20,8 @@
     
     require("helpers.php");
     render("haiku.html", ["title" => "Hello, Haiku", "haiku" => $haiku]);
-
+    redirect("haiku.html");
+    
 function gent5sline()
 {
     // Get random int and store inside variable
