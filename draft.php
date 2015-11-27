@@ -1,12 +1,5 @@
 <?php
     
-    // AE else if user reached page via POST (by submitting the generate-button form on the homepage via POST)
-    if ($_SERVER['REQUEST_METHOD'] == "POST")
-    {
-        
-    // AE to include the render function
-    require("helpers.php");
-    
     $line1 = gent5sline();
     //add a puctuation
     $punc = rtrim(RandomLine("./wordbank/punc.txt"));
@@ -25,10 +18,6 @@
     //echo $haiku = $firstline.$secondline.$thirdline;
     //echo $haiku = $firstline.$thirdline;
 
-    // AE pass the lines of the haiku to the view: haiku.php
-    render("haiku.html", ["line1" => $firstline, "line2" => $secondline, "line3" => $thirdline, "title" => "Haiku"]);
-    // redirect("http://aelfarsdottir.github.io/haiku.html");
-    
 function gent5sline()
 {
     // Get random int and store inside variable
@@ -485,14 +474,6 @@ function RandomLine($fileinput)
     }
     
     return $string;
-} // AE ends function
+}
 
-} // AE to end the if($_SERVER["REQUEST_METHOD"] == "GET")
-
-    // AE if user reached page via GET (as by clicking a link or via redirect)
-    if ($_SERVER['REQUEST_METHOD'] == "GET")
-    {
-        // else render homepage because we don't want people to be able to access our draft.php (?)
-        redirect("http://aelfarsdottir.github.io", ["title" => "Hello, Haiku"]);
-    }
 ?>

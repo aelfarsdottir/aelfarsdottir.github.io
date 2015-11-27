@@ -5,6 +5,30 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet"/>
         <link href="../css/styles.css" rel="stylesheet"/>
         <title>Hello, Haiku</title>
+        
+        <script>
+          function ajax_post() {
+            // create XMLHttpRequest object
+            var hr = new XMLHttpRequest();
+            
+            var url = "draft.php";
+            hr.open("POST", url, true);
+            
+            // set content type header info for sending url encoded vars in request
+            hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            
+            // access the onreadystatechange event for the XMLHttpRequest object
+            hr.onreadystatechange = function() {
+              if(hr.readyState == 4 && hr.status == 200) {
+                var return_data = hr.responseText;
+                  document.getElementById("status").innerHTML = return_data;
+              }
+            }
+            // send the data to PHP now, and wait for response to update the status div
+            // hr.send(vars);
+            document.getElementById("status").innerHTML = "processing...";
+          }
+        </script>
     </head>
     
     <body>
@@ -17,19 +41,17 @@
 
         <div id="middle">
           <p></p><img src="http://img11.deviantart.net/8f9c/i/2009/101/d/3/fuji_cherry_blossoms__by_zeroai.jpg" alt="Cherry Blossoms" height="342" width="342"><p></p></p>
+          <br></br>
+          <p><?= $firstline?></p>
+          <p><?= $secondline?></p>
+          <p><?= $thirdline?></p>
           <p></p>
 
           <!--we want to submit the generate button click via POST in order to call draft.php and generate a haiku-->
-          <form action="draft.php" method="POST">
-            <fieldset>
-              <div class="form-group">
-                <button class="btn btn-default" type="submit" value="Run script">
-                  <span aria-hidden="true"></span>
-                    Generate!
-                </button>
-              </div>
-            </fieldset> 
-          </form>
+          <input name="myBtn" type="submit" value="Generate!" onclick=ajax_post();">
+          <br><br>
+          
+        <div id="status"></div>
         </div>
 
         <div id="bottom">
