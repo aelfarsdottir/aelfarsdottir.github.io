@@ -27,7 +27,8 @@
                 // send the data to PHP now
                 hr.send();
                 
-                var haiku = "<?php echo $haiku ?>";
+                // PROBLEM PROBLEM PROBLEM PROBLEM!!!!!!
+                var haiku = <?php echo $haiku ?>;
                 document.write("<body><div> haiku </div></body>");
                 
                 // redirect
