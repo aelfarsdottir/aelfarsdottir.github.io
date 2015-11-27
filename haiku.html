@@ -10,7 +10,8 @@
             // make sure to collect the haiku output from draft.php
             // echo "Query: " <%= request.getParameter("query") %> "and Foo: " <%= request.getParameter("foo") %>
             function write_haiku() {
-                document.write("HELLO!");
+                var haiku = "<?php echo $haiku ?>";
+                document.write("<body><div> haiku </div></body>");
             }
 
             // if regenerate is clicked, do an ajax_post call
@@ -33,10 +34,10 @@
           
         </script>
     </head>
-    <body> 
-        <p>Hello</p>
-        <p> $haiku </p>
-    </body>
+    <!--<body> -->
+    <!--    <p> Hello </p>-->
+    <!--    <p> haiku </p>-->
+    <!--</body>-->
     <!--<body>write_haiku()</body>-->
     <!--<div><?= $haiku ?></div>-->
     <!--<body>-->
