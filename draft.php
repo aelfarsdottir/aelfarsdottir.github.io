@@ -17,6 +17,9 @@
     echo $haiku= $firstline.$secondline.$thirdline;
     //echo $haiku = $firstline.$secondline.$thirdline;
     //echo $haiku = $firstline.$thirdline;
+    
+    require("helpers.php");
+    render("index.html", ["title" => "Hello, Haiku", "haiku" => $haiku]);
 
 function gent5sline()
 {
