@@ -19,7 +19,7 @@
     //echo $haiku = $firstline.$thirdline;
     
     require("helpers.php");
-    render("haiku.html", ["title" => "Hello, Haiku", "haiku" => $haiku]);
+    render("index.html", ["title" => "Hello, Haiku", "haiku" => $haiku]);
 
 function gent5sline()
 {
