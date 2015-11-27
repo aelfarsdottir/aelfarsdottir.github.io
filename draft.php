@@ -1,15 +1,15 @@
 <?php
 
-    // AE if user reached page via GET (as by clicking a link or via redirect)
-    if ($_SERVER["REQUEST_METHOD"] == "GET")
-    {
-        // else render homepage because we don't want people to be able to access our draft.php (?)
-        redirect("index.html", ["title" => "Hello, Haiku"]);
-    }
+    // // AE if user reached page via GET (as by clicking a link or via redirect)
+    // if ($_SERVER["REQUEST_METHOD"] == "GET")
+    // {
+    //     // else render homepage because we don't want people to be able to access our draft.php (?)
+    //     redirect("http://aelfarsdottir.github.io", ["title" => "Hello, Haiku"]);
+    // }
     
-    // AE else if user reached page via POST (by submitting the generate-button form on the homepage via POST)
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
+    // // AE else if user reached page via POST (by submitting the generate-button form on the homepage via POST)
+    // if ($_SERVER["REQUEST_METHOD"] == "POST")
+    // {
         
     // AE to include the render function
     require("helpers.php");
@@ -493,6 +493,6 @@ function RandomLine($fileinput)
     return $string;
 } // AE ends function
 
-} // AE to end the if($_SERVER["REQUEST_METHOD"] == "POST"
+// } // AE to end the if($_SERVER["REQUEST_METHOD"] == "POST"
 
 ?>
