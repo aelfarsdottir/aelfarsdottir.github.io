@@ -27,7 +27,7 @@
             // // send the data to PHP now, and wait for response to update the status div
             hr.send();
             // document.getElementById("status").innerHTML = "processing...";
-            var haiku = "<?php echo $haiku ?>";
+            // var haiku = "<?php echo $haiku ?>"; THIS DOESN"T WORK PASSING PHP TO JS, AT LEAST IN GITHUB
             window.location.href = "http://aelfarsdottir.github.io/haiku.html";
           }
         </script>
