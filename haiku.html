@@ -9,10 +9,9 @@
         <script>
             // make sure to collect the haiku output from draft.php
             // echo "Query: " <%= request.getParameter("query") %> "and Foo: " <%= request.getParameter("foo") %>
-            function write_haiku() {
-                var haiku = "<?php echo $haiku ?>";
-                document.write("<body><div> haiku </div></body>");
-            }
+            // function write_haiku() {
+                
+            // }
 
             // if regenerate is clicked, do an ajax_post call
             function ajax_post() {
@@ -27,6 +26,9 @@
                 
                 // send the data to PHP now
                 hr.send();
+                
+                var haiku = "<?php echo $haiku ?>";
+                document.write("<body><div> haiku </div></body>");
                 
                 // redirect
                 window.location.href = "http://aelfarsdottir.github.io/haiku.html";
