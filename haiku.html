@@ -30,7 +30,8 @@
                 hr.send();
                 
                 // STILL A PROBLEM PROBLEM PROBLEM PROBLEM!!!!!!
-                var haiku = "<?= $haiku ?>";
+                var haiku = <?= $haiku ?>;
+                // THIS PUTS THE WORD "HAIKU" AT TOP LEFT CORNER
                 document.write("<body><div><?= $haiku ?></div></body>");
                 
                 // redirect
