@@ -24,6 +24,7 @@
                   document.getElementById("status").innerHTML = return_data;
               }
             }
+            
             // send the data to PHP now, and wait for response to update the status div
             // hr.send(vars);
             document.getElementById("status").innerHTML = "processing...";
@@ -42,8 +43,8 @@
         <div id="middle">
           <p></p><img src="http://img11.deviantart.net/8f9c/i/2009/101/d/3/fuji_cherry_blossoms__by_zeroai.jpg" alt="Cherry Blossoms" height="342" width="342"><p></p></p>
           <br></br>
-          <p><?= $haiku></p>
-          <p></p>
+          <p><?php print(htmlspecialchars($haiku));?></p>
+          <br></br>
 
           <!--we want to submit the generate button click via POST in order to call draft.php and generate a haiku-->
           <input name="myBtn" type="submit" value="Generate!" onclick=ajax_post();">
