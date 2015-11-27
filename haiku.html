@@ -28,7 +28,7 @@
                 hr.send();
                 
                 // PROBLEM PROBLEM PROBLEM PROBLEM!!!!!!
-                var haiku = <?php echo $haiku ?>;
+                var haiku = "<?php echo $haiku ?>";
                 document.write("<body><div> haiku </div></body>");
                 
                 // redirect
@@ -37,10 +37,9 @@
           
         </script>
     </head>
-    <!--<body> -->
-    <!--    <p> Hello </p>-->
-    <!--    <p> haiku </p>-->
-    <!--</body>-->
+        <body>
+            <div><?= $haiku ?></div>
+        </body>
     <!--<body>write_haiku()</body>-->
     <!--<div><?= $haiku ?></div>-->
     <!--<body>-->
