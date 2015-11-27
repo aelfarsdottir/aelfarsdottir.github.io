@@ -5,6 +5,31 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet"/>
         <link href="../css/styles.css" rel="stylesheet"/>
         <title>Hello, Haiku</title>
+        
+        <script>
+            // make sure to collect the haiku output from draft.php
+            // echo "Query: " <%= request.getParameter("query") %> "and Foo: " <%= request.getParameter("foo") %>
+            document.write('<div><?= $haiku ?></div>');
+
+            // if regenerate is clicked, do an ajax_post call
+            function ajax_post() {
+    
+                // create XMLHttpRequest object
+                var hr = new XMLHttpRequest();
+                var url = "draft.php";
+                hr.open("POST", url, true);
+                
+                // // set content type header info for sending url encoded vars in request
+                hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                
+                // send the data to PHP now
+                hr.send();
+                
+                // redirect
+                window.location.href = "http://aelfarsdottir.github.io/haiku.html";
+          }
+          
+        </script>
     </head>
     
     <body>
@@ -19,17 +44,11 @@
             <p></p><img src="http://img11.deviantart.net/8f9c/i/2009/101/d/3/fuji_cherry_blossoms__by_zeroai.jpg" alt="Cherry Blossoms" height="342" width="342"><p></p></p>
             <p><?= $haiku ?></p>
             <br></br>
-          <!--we want to submit the REgenerate button click via POST in order to call draft.php again and regenerate a haiku-->
-          <form action="draft.php" method="POST">
-            <fieldset>
-              <div class="form-group">
-                <button class="btn btn-default" type="submit">
-                  <span aria-hidden="true"></span>
-                    Regenerate!
-                </button>
-              </div>
-            </fieldset> 
-          </form>
+            
+          <!--we want to submit the REgenerate button click in order to call draft.php again and regenerate a haiku-->
+          <input name="myBtn" type="submit" value="Regenerate!" onclick="ajax_post();">
+          <br></br>
+          
         </div>
 
         <div id="bottom">
