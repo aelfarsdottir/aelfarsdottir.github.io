@@ -20,7 +20,7 @@
     
     require("helpers.php");
     render("haiku.html", ["title" => "Hello, Haiku", "haiku" => $haiku]);
-    redirect("haiku.html");
+    // redirect("haiku.html");
     
 function gent5sline()
 {
