@@ -1,11 +1,4 @@
 <?php
-
-    // AE if user reached page via GET (as by clicking a link or via redirect)
-    if ($_SERVER['REQUEST_METHOD'] == "GET")
-    {
-        // else render homepage because we don't want people to be able to access our draft.php (?)
-        redirect("http://aelfarsdottir.github.io/haiku.html", ["title" => "Hello, Haiku"]);
-    }
     
     // AE else if user reached page via POST (by submitting the generate-button form on the homepage via POST)
     if ($_SERVER['REQUEST_METHOD'] == "POST")
@@ -35,7 +28,6 @@
     // AE pass the lines of the haiku to the view: haiku.php
     render("haiku.html", ["line1" => $firstline, "line2" => $secondline, "line3" => $thirdline, "title" => "Haiku"]);
     // redirect("http://aelfarsdottir.github.io/haiku.html");
-    
     
 function gent5sline()
 {
@@ -495,6 +487,12 @@ function RandomLine($fileinput)
     return $string;
 } // AE ends function
 
-} // AE to end the if($_SERVER["REQUEST_METHOD"] == "GET"
+} // AE to end the if($_SERVER["REQUEST_METHOD"] == "GET")
 
+    // AE if user reached page via GET (as by clicking a link or via redirect)
+    if ($_SERVER['REQUEST_METHOD'] == "GET")
+    {
+        // else render homepage because we don't want people to be able to access our draft.php (?)
+        redirect("http://aelfarsdottir.github.io", ["title" => "Hello, Haiku"]);
+    }
 ?>
