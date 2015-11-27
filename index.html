@@ -14,7 +14,7 @@
             hr.open("POST", url, true);
             
             // // set content type header info for sending url encoded vars in request
-            // hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             
             // // access the onreadystatechange event for the XMLHttpRequest object
             // hr.onreadystatechange = function() {
@@ -44,13 +44,14 @@
           <br></br>
 
           <!--we want to submit the generate button click via POST in order to call draft.php and generate a haiku-->
-          <input name="myBtn" type="submit" value="Generate!" onclick=ajax_post();">
+          <input name="myBtn" type="submit" value="Generate!" onclick="ajax_post()";>
           <br></br>
           
-          <p><?php print(htmlspecialchars($haiku));?></p>
-          
+          <!--<?php print(htmlspecialchars($haiku));?>-->
+        
         <!--<div id="status"></div>-->
-        <!--</div>-->
+        
+        </div>
 
         <div id="bottom">
           <!-- Brought to you by <a href="http://aelfarsdottir.github.io">Hello, Haiku</a>. -->
