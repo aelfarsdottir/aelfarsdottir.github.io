@@ -4,22 +4,30 @@
     //add a puctuation
     $punc = rtrim(RandomLine("./wordbank/punc.txt"));
     $firstline = $line1.$punc."\n";
+    // $firstline = $line1.$punc;
     
     $line2 = gent7sline();
     $punc = rtrim(RandomLine("./wordbank/punc.txt"));
     $secondline = $line2.$punc."\n";
+    // $secondline = $line2.$punc;
     
     $line3 = gent5sline();
     // add a terminating punctuation
     $puncf = rtrim(RandomLine("./wordbank/puncf.txt"));
     $thirdline = $line3.$puncf."\n";
-    
+    // $thirdline = $line3.$puncf;
+   
+    echo $firstline;
+    echo $secondline;
+    echo $thirdline;
     echo $haiku= $firstline.$secondline.$thirdline;
     //echo $haiku = $firstline.$secondline.$thirdline;
     //echo $haiku = $firstline.$thirdline;
     
     require("helpers.php");
-    render("haiku.html", ["title" => "Hello, Haiku", "haiku" => $haiku]);
+    render("haiku.html", ["title" => "Hello, Haiku", "haiku" => $haiku, "line1" => $firstline, "line2" => $secondline, "line3" => $thirdline]);
+
+    // render("haiku.html", ["title" => "Hello, Haiku", "haiku" => $haiku]);
     // redirect("haiku.html");
     
 function gent5sline()
